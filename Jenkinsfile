@@ -15,11 +15,6 @@ pipeline {
                 sh "docker build -t lbg ." 
             }
         }
-        stage('Modification') {
-            steps {
-               sh 'env.PORT=5001'
-            }
-        }
         stage('Run Container') {
             steps {
                 sh "docker run -d -p 80:\$PORT -e PORT=\$PORT lbg"
