@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Modification') {
             steps {
-                env.PORT=5001
+               sh 'env.PORT=5001'
             }
         }
         stage('Run Container') {
