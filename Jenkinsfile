@@ -1,6 +1,7 @@
 pipeline {
     environment {
         DOCKER_CREDENTIALS = credentials("DOCKER_CREDENTIALS")
+        PORT = '5001'
     }
     agent any
     stages {
