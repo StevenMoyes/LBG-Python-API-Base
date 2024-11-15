@@ -6,8 +6,8 @@ pipeline {
     stages {
         stage('Cleanup') {
             steps {
-                sh "docker rm -f $(docker ps -aq) || true"
-                sh "docker rmi -f $(docker images) || true"
+                sh "docker rm -f \$(docker ps -aq) || true"
+                sh "docker rmi -f \$(docker images) || true"
            }
         }
         stage('Build') {
