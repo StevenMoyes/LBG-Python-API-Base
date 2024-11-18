@@ -16,8 +16,8 @@ kind: Service
 metadata: 
     name: nginx 
 spec: 
-    selector: 
-      app: nginx 
+  selector: 
+    app: nginx 
   ports: 
   - protocol: TCP 
     port: 80 
