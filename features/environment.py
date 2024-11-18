@@ -1,9 +1,12 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
 def before_all(context):
-    context.browser = webdriver.Chrome(r"C:\Users\Admin\Documents\LBG-Python-API\webdrivers\chromedriver.exe")
+    print("Browser initialising...")
+    context.browser = webdriver.Chrome(ChromeDriverManager().install())
     context.browser.maximize_window()
 
 def after_all(context):
-    context.browser.quit()
+    if hasattr(context, 'browser'):
+        context.browser.quit()
     
