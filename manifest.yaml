@@ -38,9 +38,6 @@ data:
       server {
         listen 80;
         location / {
-          return 200 "OK Default Path";
-        }
-        location /flask {
           proxy_pass http://flask-service:5500;
         }
         location /hello {
