@@ -36,7 +36,7 @@ pipeline {
                 ```
             }
         }
-        stage('Deploy') {
+        stage('Run Container') {
             steps {
                 script {
                     if (env.GIT_BRANCH == 'origin/main') {

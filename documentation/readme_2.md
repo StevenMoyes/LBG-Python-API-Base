@@ -1,0 +1,1 @@
+This is a dummy readme document that evidences i know how to create a document from the command line, stage the changes and push them to github.

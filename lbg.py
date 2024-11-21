@@ -9,15 +9,19 @@ from flask_api import status
 # import SQL Alchemy (including ORM - Object-relational Mapper - and its data mapper pattern)
 from models import db, ItemModel
 from sqlalchemy import exc
+import os
 
 # JavaScript/ES6 text/plain MIME Content type fix (avoids registry hack!)
 import mimetypes
 mimetypes.add_type('text/javascript', '.js')
 
+<<<<<<< HEAD
 # set up the app with listening socket for http requests and appropriate hostname
 PORT = 80
 HOST = '0.0.0.0'
 
+=======
+>>>>>>> 4287f1048c3a04d378cd735652a2ecd83a5ac084
 # get app to serve static files from the public directory
 app = Flask(__name__, static_url_path=f'/', static_folder='./static')
 
@@ -205,5 +209,7 @@ def delete_one(_id):
 # module import protection
 if __name__ == '__main__':
     # get app to serve
+    PORT = (os.getenv('PORT', 8080))
+    HOST = '0.0.0.0'
     print(f'API Listening on http://{HOST}:{PORT}')
     app.run(host=HOST, port=PORT, debug=True)
