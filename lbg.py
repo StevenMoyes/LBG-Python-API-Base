@@ -15,13 +15,6 @@ import os
 import mimetypes
 mimetypes.add_type('text/javascript', '.js')
 
-<<<<<<< HEAD
-# set up the app with listening socket for http requests and appropriate hostname
-PORT = 80
-HOST = '0.0.0.0'
-
-=======
->>>>>>> 4287f1048c3a04d378cd735652a2ecd83a5ac084
 # get app to serve static files from the public directory
 app = Flask(__name__, static_url_path=f'/', static_folder='./static')
 
