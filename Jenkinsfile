@@ -42,7 +42,7 @@ pipeline {
                     if (env.GIT_BRANCH == 'origin/main') {
                         sh '''
                         kubectl apply -f ./kubernetes -n prod
-                        kubectle set image deployment/web-deployment web-app=stevenmoyes/lbg-python-api-base-jenk:v${BUILD_NUMBER} -n prod
+                        kubectl set image deployment/web-deployment web-app=stevenmoyes/lbg-python-api-base-jenk:v${BUILD_NUMBER} -n prod
                         '''
                     } else if (env.GIT_BRANCH == 'origin/dev') {
                         sh  '''
