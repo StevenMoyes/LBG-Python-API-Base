@@ -58,9 +58,4 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            sh "docker system prune"
-        }
-    }
 }
